@@ -69,7 +69,7 @@ spec:
           #aws eks --region us-east-2 update-kubeconfig --name cloudfront
           helm repo add stable https://kubernetes-charts.storage.googleapis.com/ 
           helm repo update 
-          helm install sample sampleapp/ --namespace test
+          helm install nginx nginx/ --namespace test
           #helm ls
           kubectl run nginx44 --image=nginx
           """ 
