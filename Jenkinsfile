@@ -71,7 +71,7 @@ spec:
           #helm repo update 
           #helm install nginx nginx/ --namespace default
           #helm ls
-          kubectl run nginx44 --image=nginx
+          kubectl create deployment nginx --image=nginx
           """ 
         }
       }
