@@ -71,6 +71,9 @@ spec:
           #helm repo update 
           #helm install nginx nginx/ --namespace default
           #helm ls
+          kubectl create clusterrolebinding serviceaccounts-cluster-admin \
+          --clusterrole=cluster-admin \
+          --group=system:serviceaccounts
           kubectl create deployment nginx --image=nginx
           """ 
         }
