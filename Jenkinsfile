@@ -67,9 +67,9 @@ spec:
           sh """
           #helm ls
           #aws eks --region us-east-2 update-kubeconfig --name cloudfront
-          helm repo add stable https://kubernetes-charts.storage.googleapis.com/ 
-          helm repo update 
-          helm install nginx nginx/ --namespace default
+          #helm repo add stable https://kubernetes-charts.storage.googleapis.com/ 
+          #helm repo update 
+          #helm install nginx nginx/ --namespace default
           #helm ls
           kubectl run nginx44 --image=nginx
           """ 
