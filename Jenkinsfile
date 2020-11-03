@@ -70,7 +70,7 @@ spec:
           #aws eks --region us-east-2 update-kubeconfig --name cloudfront
           helm repo add stable https://charts.helm.sh/stable 
           helm repo update 
-          helm install nginx1 nginx/ 
+          helm install nginx nginx/ 
           """ 
         }
       }
