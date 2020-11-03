@@ -35,7 +35,7 @@ spec:
     - cat
     tty: true
   - name: helm
-    image:  alpine/helm
+    image: 479022012441.dkr.ecr.ap-south-1.amazonaws.com/new:latest
     command:
     - cat
     tty: true
