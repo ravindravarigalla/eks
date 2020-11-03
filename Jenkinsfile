@@ -35,7 +35,7 @@ spec:
     - cat
     tty: true
   - name: helm
-    image: gcr.io/still-smithy-279711/ravindra-helm
+    image:  alpine/helm
     command:
     - cat
     tty: true
@@ -48,7 +48,7 @@ spec:
       steps {
         container('aws') {
           sh """
-           #aws eks --region us-east-2 update-kubeconfig --name cloudfront
+           aws eks --region ap-south-1 update-kubeconfig --name cloudfront
           """
         }
       }
@@ -58,7 +58,7 @@ spec:
         container('gcloud') {
           sh "#gcloud auth list"
           sh "#PYTHONUNBUFFERED=1 gcloud builds submit -t  us.gcr.io/still-smithy-279711/go . "
-          sh "gcloud container clusters get-credentials cluster-1 --zone us-central1-c --project still-smithy-279711"
+          sh "#gcloud container clusters get-credentials cluster-1 --zone us-central1-c --project still-smithy-279711"
         }
       }
     }
@@ -70,7 +70,7 @@ spec:
           #aws eks --region us-east-2 update-kubeconfig --name cloudfront
           helm repo add stable https://kubernetes-charts.storage.googleapis.com/ 
           helm repo update 
-          helm install nginx nginx/ 
+          helm install nginx1 nginx/ 
           """ 
         }
       }
